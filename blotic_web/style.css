@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+    color: #fff;
+    
+}
+
+body{
+    background: linear-gradient(35deg,#060009,58%,#020f65);
+    height: 100vh;
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 10%;
+}
+
+.header img{
+    height: 190px;
+    scale: .9;
+    filter: saturate(3);
+    transition: .5s ease;
+}
+
+.header img:hover{
+    filter: saturate(3);
+    scale: 1;
+}
+
+nav {
+    background-color: transparent;
+    transition: top 0.3s;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: linear-gradient(35deg,#060009,58%,#020f65);
+    font-family: "Poppins", sans-serif;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 55px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.nav-links a:hover{
+    color: aqua;
+}
+
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 28vh;
+        top: 8vh;
+        background-color:transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+        transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*--Section--*/
+
+section{
+    padding: 10rem 9% 2rem;
+    height: 100vh;
+    width: auto;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-content{
+    max-width: 600px;
+}
+.text-content h2{
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 550;
+}
+
+.text-content span{
+    font-size: 26px;
+    color: aquamarine;
+}
+.text-content p{
+    font-size: 13px;
+    text-align: justify;
+}
+
+.button{
+    margin: 20px 0;
+}
+
+.btn{
+    height: 45px;
+    width: 150px;
+    background: transparent;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.home .imageSet1 img{
+    height: 450px;
+    width: fit-content;
+    display: flex;
+    margin-left: 100px;
+    /* width: 100%;
+    max-width: 400px;
+    height: auto; */
+    animation: animHero 3s linear infinite;
+}
+@media only screen and (max-width:768px) {
+    .home{
+        width: auto;
+    }
+    .text-content{
+        width: auto;
+    }
+    .imageSet1{
+        display:none;
+    }
+    
+}
+@media all and (min-width: 600px)  {  body  { font-size:0.8em;  } }
+@keyframes animHero {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(16px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.section2{
+    position: relative;
+    width: 100%;
+    background: linear-gradient(35deg,#060009,58%,#020f65);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section2 .social_icon, .section2 .menu {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: 10px 0;
+}
+
+
+#particles-js
+{
+    height: 100%;
+    background: transparent;
+}
