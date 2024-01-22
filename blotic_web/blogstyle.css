@@ -24,6 +24,7 @@ body {
 }
 
 .header img{
+    margin-top: -5vh;
     height: 190px;
     scale: .9;
     filter: saturate(3);
@@ -47,6 +48,7 @@ nav {
     font-family: "Poppins", sans-serif;
 }
 .nav-links {
+    margin-top: -5vh;
     display: flex;
     justify-content: space-around;
     width: 30%;
@@ -172,7 +174,7 @@ hr{
 }
 /*=================================PROJECTS==============================*/
 .heading {
-    margin-top: 22vh;
+    margin-top: 20vh;
     text-align: center;
 }
 
@@ -185,8 +187,27 @@ hr{
 
 .ss {
     aspect-ratio: 3/2;
-    width: 27vw;
+    object-fit: contain;
+    width: 24vw;
     border-radius: 5px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    transition-duration: 0.5s;
+}
+.glass:hover .ss{
+    scale: 1.02;
+    -webkit-filter: drop-shadow(7px 7px 7px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(7px 7px 7px rgba(255, 255, 255, 0.5));
+}
+.blogphoto{
+    margin-top: 20px;
+    aspect-ratio: 16/5;
+    object-position: 100% 50%;
+    object-fit: cover;
+    width: 70vw;
+    border-radius: 5px;
+    margin-left: 50%;
+    transform: translate(-50%);
 }
 
 .btn {
@@ -216,14 +237,17 @@ hr{
     background: #222533;
     position: static;
     bottom: 2vh;
-    margin-left: 0vw;
+    margin-left: 3vw;
     margin-top: 40px;
 }
 
 #return:hover {
     background: white;
 }
-
+.info{
+    font-size: 0.7rem;
+    margin-top: -0.7rem;
+}
 .bg {
     position: fixed;
     height: 80vh;
@@ -232,6 +256,7 @@ hr{
     z-index: -1;
     filter: saturate(2);
 }
+
 .content::first-letter {
     font-size: 200%;
   }
@@ -250,10 +275,9 @@ hr{
     html,
     body {
         max-width: 100%;
-        overflow-x: hidden;
     }
     .glass {
-        width: 80vw;
+        width: 84vw;
         backdrop-filter: blur(9px);
         border-radius: 5px;
     }
@@ -283,9 +307,11 @@ hr{
     }
 
     .ss {
-        width: 90vw;
+        width: 84vw;
     }
-
+    .blogphoto{
+        aspect-ratio: 16/9;
+    }
     .design-line {
         display: none;
     }
@@ -293,7 +319,7 @@ hr{
     #return {
         position: relative;
         margin-top: 40px;
-        margin-left: 2vw;
+        margin-left: 9vw;
     }
     .bg {
         position: fixed;
