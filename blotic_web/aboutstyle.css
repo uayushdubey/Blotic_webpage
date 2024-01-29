@@ -268,7 +268,7 @@ section{
     display: inline-block;
     width: 35px;
     height: 35px;
-    background-color: transparent;
+    background-color: rgb(169,169,169);
     border-radius: 2px;
     font-size: 20px;
     color: #ffffff;
