@@ -15,20 +15,23 @@ body{
 
 }
 
+header{
+    backdrop-filter: blur(7px);
+    position: fixed;
+    transition: top 0.7s;
+}
 .header{
     position: fixed;
-    top: 0;
     left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 32px 10%;
+    top:0;
+    width: 100vw;
 }
 
 .header img{
-    margin-top: -5vh;
-    height: 190px;
+    margin-top: 0px;
+    height: 90px;
+    width: 190px;
+    object-fit: cover;
     scale: .9;
     filter: saturate(3);
     transition: .5s ease;
@@ -42,19 +45,15 @@ body{
 nav {
     background-color: transparent;
     transition: top 0.3s;
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
     background-color: linear-gradient(35deg,#060009,58%,#020f65);
     font-family: "Poppins", sans-serif;
 }
 .nav-links {
-    margin-top: -5vh;
     display: flex;
     justify-content: space-around;
-    width: 30%;
 }
 
 .nav-links li {
@@ -72,7 +71,13 @@ nav {
 .nav-links a:hover{
     color: aqua;
 }
-
+.align{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
 
 .burger {
     display: none;
@@ -149,12 +154,9 @@ nav {
 }
 
 
-
 /*--section--*/
 section{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding: 10rem 9% 2rem;
+    padding: 15vh 9% 2rem;
     height: auto;
     width: auto;
 }
@@ -207,10 +209,11 @@ section{
 
 
 .home .imageSet1 img{
-    height: 200px;
+    height: 270px;
     width: fit-content;
     display: flex;
     margin-left: 100px;
+    margin-top: -100px;
 }
 @media only screen and (max-width:768px) {
     .home{
@@ -219,8 +222,8 @@ section{
     .text-content{
         width: auto;
     }
-    .imageSet1{
-        display:none;
+    .home .imageSet1 img{
+        display: none;
     }
     
 }
@@ -262,6 +265,7 @@ section{
     float: right;
     margin-top: 6px;
     max-width: 180px;
+    padding-right: 30px;
   }
   
   .footer-distributed .footer-right a {
@@ -296,3 +300,12 @@ section{
       line-height: 1.8;
     }
   }
+
+  footer{
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  .footer-right{
+    margin-left: -30px;
+  }
+

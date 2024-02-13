@@ -15,20 +15,25 @@ body{
 
 }
 
+header{
+    backdrop-filter: blur(7px);
+    position: fixed;
+    transition: top 0.7s;
+}
 .header{
     position: fixed;
-    top: 0;
     left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 32px 10%;
+    top:0;
+    width: 100vw;
 }
-
+.logo{
+    z-index: 300;
+}
 .header img{
-    margin-top: -5vh;
-    height: 190px;
+    margin-top: 0px;
+    height: 90px;
+    width: 190px;
+    object-fit: cover;
     scale: .9;
     filter: saturate(3);
     transition: .5s ease;
@@ -42,19 +47,15 @@ body{
 nav {
     background-color: transparent;
     transition: top 0.3s;
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
     background-color: linear-gradient(35deg,#060009,58%,#020f65);
     font-family: "Poppins", sans-serif;
 }
 .nav-links {
-    margin-top: -5vh;
     display: flex;
     justify-content: space-around;
-    width: 30%;
 }
 
 .nav-links li {
@@ -72,9 +73,18 @@ nav {
 .nav-links a:hover{
     color: aqua;
 }
-
+.align{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
 
 .burger {
+    display: none;
+}
+#hide{
     display: none;
 }
 
@@ -96,45 +106,52 @@ nav {
     body {
         overflow-x: hidden;
     }
-    
-    .nav-links {
+    nav{
+        width: 100vw;
         position: fixed;
-        right: 0px;
-        height: 28vh;
-        top: 8vh;
-        background-color:transparent;
+        background-color: #060009;
+        height: 100vh;
+        z-index: 50;
+        opacity: 0.7;
+        right: -120%;
+        transition-duration: 0.7s;
+    }
+    .nav-links{
+        position: absolute;
+        transform: translate(-20%);
+        margin-left:0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition-duration: 0.7s;
     }
     
-    .nav-links li {
-        opacity: 0;
+    .nav-links li{
+        margin: 30px;
+    }
+    #hide{
+        display: none;
+        background-color: #06000900;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        top:30px;
+        right:20px;
+        height: 30px;
+        width: 30px;
+        z-index: 100;
     }
     
     .burger {
         display: block;
         cursor: pointer;
+        position: fixed;
+        top:30px;
+        z-index: 50;
+        right:20px;
     }
 }
 
-.nav-active {
-        transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
@@ -148,10 +165,11 @@ nav {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+
 /*--Section--*/
 
 section{
-    padding: 10rem 9% 2rem;
+    padding: 10vh 9% 2rem;
     height: 100vh;
     width: auto;
 }
@@ -209,11 +227,31 @@ section{
     .home{
         width: auto;
     }
+    #particles-js{
+        display: none;
+    }
     .text-content{
         width: auto;
     }
-    .imageSet1{
-        display:none;
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+    .home .imageSet1 img{
+        height: auto;
+        width: 100vw;
+        margin-left: 0px;
+        margin-top: -40px;
+    }
+    .btcimage{
+        scale: 0.7;
+        margin-left: 50%;
+        transform: translate(-50%);
+        z-index: -10;
+    }
+    .home{
+        margin-top: 270px;
+        margin-bottom: 190px;
     }
     
 }
@@ -292,6 +330,7 @@ section{
     float: right;
     margin-top: 6px;
     max-width: 180px;
+    padding-right: 30px;
   }
   
   .footer-distributed .footer-right a {
@@ -325,4 +364,11 @@ section{
     .footer-distributed .footer-left p.footer-links {
       line-height: 1.8;
     }
+  }
+  footer{
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  .footer-right{
+    margin-left: -30px;
   }

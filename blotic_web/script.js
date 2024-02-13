@@ -6,15 +6,6 @@ function navSlide() {
     burger.addEventListener("click", () => {
         //Toggle Nav
         nav.classList.toggle("nav-active");
-        
-        //Animate Links
-        navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = ""
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-            }
-        });
         //Burger Animation
         burger.classList.toggle("toggle");
     });
@@ -22,3 +13,32 @@ function navSlide() {
 }
 
 navSlide();
+
+function showmenu(){
+    document.getElementById("navbar").style.right="0%";
+    document.getElementById("navbar").style.opacity=1;
+    document.getElementById("nav-links").style.opacity=1;
+    document.getElementById("nav-links").style.marginLeft="20%";
+    document.getElementById("hide").style.display="block";
+}
+
+function hidemenu(){
+    document.getElementById("navbar").style.right="-120%";
+    document.getElementById("navbar").style.opacity=0;
+    document.getElementById("nav-links").style.opacity=0;
+    document.getElementById("nav-links").style.marginLeft="120%";
+    document.getElementById("hide").style.display="none";
+}
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.top = "0";
+  } else {
+    document.getElementById("header").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
