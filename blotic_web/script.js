@@ -15,22 +15,17 @@ function navSlide() {
 navSlide();
 
 function showmenu(){
-    document.getElementById("navbar").style.right="0%";
-    document.getElementById("navbar").style.opacity=1;
-    document.getElementById("nav-links").style.opacity=1;
-    document.getElementById("nav-links").style.marginLeft="20%";
-    document.getElementById("hide").style.display="block";
+  document.getElementById("navbar").style.display="flex";
+  document.getElementById("hide").style.display="block";
+  document.getElementById("show").styledisplay="none";
 }
 
 function hidemenu(){
-    document.getElementById("navbar").style.right="-120%";
-    document.getElementById("navbar").style.opacity=0;
-    document.getElementById("nav-links").style.opacity=0;
-    document.getElementById("nav-links").style.marginLeft="120%";
-    document.getElementById("hide").style.display="none";
+  document.getElementById("navbar").style.display="none";
+  document.getElementById("hide").style.display="none";
+  document.getElementById("show").style.display="block";
 }
-
-var prevScrollpos = window.pageYOffset;
+var prevScrollpos = window.scrollY;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {

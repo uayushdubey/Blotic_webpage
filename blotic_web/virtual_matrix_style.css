@@ -82,7 +82,7 @@ header{
 .stack:hover{
     filter: brightness(1) invert(0) saturate(10) hue-rotate(80deg);
 }
-#close{
+#hide{
     filter: brightness(1) invert(0) saturate(10) hue-rotate(80deg);
     display: none;
 }
@@ -183,6 +183,8 @@ header{
     margin-top: 10px;
     color: rgba(255, 255, 255, 0.562);
     font-weight: 100;
+    width: 300px;
+    word-wrap: break-word;
 }
 .watch{
     margin-left: 50%;
@@ -375,4 +377,8 @@ header{
     .gradient{
         left:110%;
         }
+}
+
+.watchnow{
+    text-decoration: none;
 }
