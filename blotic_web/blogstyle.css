@@ -16,17 +16,20 @@ body {
 header {
     backdrop-filter: blur(7px);
     position: fixed;
+    transition: top 0.7s;
+    z-index: 50;
 }
 
-.header {
+.header{
     position: fixed;
     left: 0;
-    top: 0;
+    top:0;
     width: 100vw;
-    transition: top 0.7s;
 }
-
-.header img {
+.logo{
+    z-index: 300;
+}
+.header img{
     margin-top: 0px;
     height: 90px;
     width: 190px;
@@ -36,10 +39,11 @@ header {
     transition: .5s ease;
 }
 
-.header img:hover {
+.header img:hover{
     filter: saturate(3);
     scale: 1;
 }
+
 nav {
     background-color: transparent;
     transition: top 0.3s;
@@ -107,7 +111,6 @@ nav {
         position: fixed;
         background-color: #060009;
         height: 100vh;
-        z-index: 50;
         opacity: 0.7;
         right: -120%;
         transition-duration: 0.7s;
@@ -148,6 +151,7 @@ nav {
     }
 }
 
+
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -180,7 +184,7 @@ hr {
     border-radius: 15px;
     margin-top: 15px;
     backdrop-filter: blur(4px);
-    z-index: -3;
+    z-index: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
@@ -205,7 +209,6 @@ hr {
     display: flex;
     flex-direction: column;
 }
-
 
 .ss {
     aspect-ratio: 3/2;
@@ -253,6 +256,7 @@ hr {
 }
 
 .row {
+    z-index: 0;
     display: flex;
     justify-content: space-around;
     margin-bottom: 4vh;
