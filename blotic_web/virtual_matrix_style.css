@@ -117,6 +117,7 @@ header{
     -webkit-text-fill-color: transparent;
 }
 .register{
+    display: block;
     padding:15px 30px 15px 30px;
     margin-top: 80px;
     border-radius: 10px;
@@ -127,6 +128,12 @@ header{
     background-image: radial-gradient(#602EA6,#7851af,#CC75DB);
     background-position: 50% 50%;
     box-shadow: 5px -7px 30px #CC75DB;
+}
+#fifa{
+    margin-top: 20px;
+}
+.register a{
+    text-decoration: none;
 }
 .register:hover{
     transition: all 1s ease-in-out;
